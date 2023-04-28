@@ -14,6 +14,7 @@ import {
 import { db } from "../firebase";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import {AiOutlineSearch} from 'react-icons/ai'
 
 const Search = () => {
   const [username, setUsername] = useState("");
@@ -90,6 +91,7 @@ const Search = () => {
           onChange={(e) => setUsername(e.target.value)}
           type="text"
         />
+        <button onClick={handleSearch}>search < AiOutlineSearch/></button>
       </div>
       {err && "User not found"}
       {user && (
